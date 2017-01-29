@@ -10,3 +10,5 @@ if test -z "$SSH_CONNECTION"; and command -v emacsclient >/dev/null
 else
   set -x EDITOR vim
 end
+
+set -x LESS "-g -i -M -R -S -w -X -z-4"
