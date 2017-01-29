@@ -33,8 +33,8 @@ const MAPPINGS = {
   'mark_scroll_position': 'mm',
   'scroll_to_mark': 'gm',
 
-  'tab_new': 'T',
-  'tab_new_after_current': 't',
+  'tab_new': 't',
+  'tab_new_after_current': 'T',
   'tab_close': 'd x',
   'tab_restore': 'u',
   'tab_restore_list': 'U',
