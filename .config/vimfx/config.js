@@ -3,6 +3,8 @@ const gClipboardHelper = Cc['@mozilla.org/widget/clipboardhelper;1']
       .getService(Ci.nsIClipboardHelper);
 const {Preferences} = Cu.import('resource://gre/modules/Preferences.jsm', {});
 
+const {sendKey} = Cu.import(`${__dirname}/shared.js?${Math.random()}`, {});
+
 const FIREFOX_PREFS = {
   'browser.startup.page': 3,
   'browser.tabs.animate': false,
@@ -49,10 +51,22 @@ const MAPPINGS = {
   'custom.mode.normal.search_selected_text': 's',
   'custom.mode.normal.copy_selection_or_url': 'yy',
   'custom.mode.normal.copy_as_markdown': 'ym',
-  'custom.mode.normal.click_toolbar_pocket': 'mp'
+  'custom.mode.normal.click_toolbar_pocket': 'mp',
+  'custom.mode.normal.send_up': '<force><c-p>',
+  'custom.mode.normal.send_down': '<force><c-n>',
 };
 
 const {commands} = vimfx.modes.normal;
+
+function _sendKey(key, {vim, event}) {
+  if (event.target.nodeName === "tabbrowser") {
+    // Inside contents
+    vimfx.send(vim, 'sendKey', {key});
+  } else {
+    // Browser components
+    sendKey(vim.window, key);
+  }
+}
 
 const CUSTOM_COMMANDS = [
   [
@@ -104,6 +118,20 @@ const CUSTOM_COMMANDS = [
     }, ({vim}) => {
       vim.window.document.getElementById('pocket-button').click();
     }
+  ],
+  [
+    {
+      name: 'send_up',
+      description: 'Send the <up> key'
+    },
+    _sendKey.bind(null, 'up')
+  ],
+  [
+    {
+      name: 'send_down',
+      description: 'Send the <down> key'
+    },
+    _sendKey.bind(null, 'down')
   ]
 ];
 
