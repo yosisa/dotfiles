@@ -59,12 +59,10 @@ const MAPPINGS = {
 const {commands} = vimfx.modes.normal;
 
 function _sendKey(key, {vim, event}) {
-  if (event.target.nodeName === "tabbrowser") {
-    // Inside contents
-    vimfx.send(vim, 'sendKey', {key});
-  } else {
-    // Browser components
+  if (vim.isUIEvent(event)) {
     sendKey(vim.window, key);
+  } else {
+    vimfx.send(vim, 'sendKey', {key});
   }
 }
 
