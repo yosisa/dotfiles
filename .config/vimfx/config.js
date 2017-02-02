@@ -6,6 +6,9 @@ const {Preferences} = Cu.import('resource://gre/modules/Preferences.jsm', {});
 const {sendKey} = Cu.import(`${__dirname}/shared.js?${Math.random()}`, {});
 
 const FIREFOX_PREFS = {
+  'general.smoothScroll': true,
+  'general.smoothScroll.lines': false,
+  'toolkit.scrollbox.verticalScrollDistance': 5,
   'browser.startup.page': 3,
   'browser.tabs.animate': false,
   'browser.search.suggest.enabled': true,
