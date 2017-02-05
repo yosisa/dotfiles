@@ -1,0 +1,45 @@
+#!/bin/bash
+
+case "$OSTYPE" in
+    darwin*)
+        if which reattach-to-user-namespace &>/dev/null; then
+            COPY="reattach-to-user-namespace pbcopy"
+        else
+            COPY="ssh 127.0.0.1 pbcopy"
+        fi
+        ;;
+    *) COPY="";
+esac
+
+function start {
+    if [[ -n "$COPY" ]]; then
+        tmux bind-key -n 'C-w' run-shell 'tmux-copy stop'
+        tmux bind-key -n 'C-c' run-shell 'tmux-copy cancel'
+    fi
+    tmux copy-mode
+}
+
+function stop {
+    clearkeys
+    tmux send-keys 'C-w' # invoke copy-selection
+    tmux save-buffer - | $COPY # copy to clipboard
+}
+
+function cancel {
+    clearkeys
+    tmux send-keys 'C-c' # invoke cancel
+}
+
+function clearkeys {
+    tmux unbind-key -n 'C-w'
+    tmux unbind-key -n 'C-c'
+}
+
+case "$1" in
+    start) start ;;
+    stop) stop ;;
+    cancel) cancel ;;
+    *) ;;
+esac
+
+exit 0
