@@ -30,6 +30,7 @@ const MAPPINGS = {
 
   'history_back': 'h',
   'history_forward': 'l',
+  'history_list': 'gh',
 
   'scroll_left': 'H',
   'scroll_right': 'L',
