@@ -11,4 +11,4 @@ else
   set -x EDITOR vim
 end
 
-set -x LESS "-g -i -M -R -S -w -X -z-4"
+set -x LESS "-g -i -M -R -S -X -z-4"
