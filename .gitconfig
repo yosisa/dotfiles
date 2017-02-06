@@ -1,0 +1,32 @@
+[user]
+	name = Yoshihisa Tanaka
+	email = yt.hisa@gmail.com
+[color]
+	diff = auto
+[alias]
+	co = checkout
+	ci = commit
+	di = diff
+	st = status -u
+	br = branch
+	dic = diff --cached
+	cia = commit -a
+	lf = log --pretty=fuller
+	lg = log --graph
+	lgf = log --graph --pretty=fuller
+	lo = log --pretty=oneline
+	ls = ls-files
+[log]
+	decorate = short
+	abbrevCommit = true
+[push]
+	default = simple
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[ghq]
+	root = ~/.ghq
+	root = ~/go/src
+[include]
+	path = .gitconfig.local
