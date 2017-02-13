@@ -2,6 +2,7 @@ function add_path_if_exists
   test -d "$argv[1]"; and set PATH "$argv[1]" $PATH
 end
 
+add_path_if_exists "$HOME/go/bin"
 add_path_if_exists "$HOME/.cargo/bin"
 add_path_if_exists "$HOME/bin"
 
@@ -12,3 +13,4 @@ else
 end
 
 set -x LESS "-g -i -M -R -S -X -z-4"
+set -x GOPATH "$HOME/go"
