@@ -42,10 +42,12 @@ const MAPPINGS = {
   'tab_new': 't',
   'tab_new_after_current': 'T',
   'tab_close': 'd x',
+  'tab_close_to_end': 'D gx$',
   'tab_restore': 'u',
   'tab_restore_list': 'U',
   'tab_select_previous': ',',
   'tab_select_next': '.',
+  'tab_select_most_recent': 'z',
   'tab_select_first_non_pinned': '^',
   'tab_select_last': '$',
 
