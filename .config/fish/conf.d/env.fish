@@ -14,3 +14,7 @@ end
 
 set -x LESS "-g -i -M -R -S -X -z-4"
 set -x GOPATH "$HOME/go"
+
+if command -v direnv >/dev/null
+  eval (direnv hook fish)
+end
