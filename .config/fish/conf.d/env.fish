@@ -6,10 +6,13 @@ add_path_if_exists "$HOME/go/bin"
 add_path_if_exists "$HOME/.cargo/bin"
 add_path_if_exists "$HOME/bin"
 
-if test -z "$SSH_CONNECTION"; and command -v emacsclient >/dev/null
-  set -x EDITOR emacsclient
-else
-  set -x EDITOR vim
+set -x EDITOR vim
+if test -z "$SSH_CONNECTION"
+  if command -v code >/dev/null
+    set -x EDITOR 'code -w'
+  else if command -v emacsclient >/dev/null
+    set -x EDITOR emacsclient
+  end
 end
 
 set -x LESS "-g -i -M -R -S -X -z-4"
