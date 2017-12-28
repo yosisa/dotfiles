@@ -7,7 +7,12 @@ function _git_root
 end
 
 function _git_branch
-  echo (string split -r -m1 / (git symbolic-ref HEAD ^/dev/null))[2]
+  set -l git_branch (git symbolic-ref HEAD ^/dev/null)
+  if test -n "$git_branch"
+    echo (string split -r -m1 / $git_branch)[2]
+  else
+    echo '(detached)'
+  end
 end
 
 function _git_status
