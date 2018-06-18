@@ -20,6 +20,8 @@ ctrl + cmd - h : chunkc tiling::window --warp west
 ctrl + cmd - j : chunkc tiling::window --warp south
 ctrl + cmd - k : chunkc tiling::window --warp north
 ctrl + cmd - l : chunkc tiling::window --warp east
+shift + ctrl + alt + cmd - left : chunkc tiling::window --send-to-desktop prev
+shift + ctrl + alt + cmd - right : chunkc tiling::window --send-to-desktop next
 shift + ctrl + alt + cmd - b : chunkc tiling::window --send-to-monitor prev
 shift + ctrl + alt + cmd - f : chunkc tiling::window --send-to-monitor next
 
