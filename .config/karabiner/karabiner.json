@@ -23,18 +23,140 @@
             },
             "name": "Default profile",
             "selected": true,
-            "simple_modifications": {
-                "caps_lock": "left_control"
-            },
-            "standalone_keys": {
-                "caps_lock": "escape",
-                "left_control": "escape",
-                "left_command": "japanese_eisuu",
-                "right_command": "japanese_kana",
-                "tab": "tab"
-            },
-            "one_to_many_mappings": {
-                "tab": ["left_control", "left_shift", "left_option", "left_command"]
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "description": "left command -> eisuu",
+                                "from": {
+                                    "key_code": "left_command",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_command"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "japanese_eisuu"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "right command -> kana",
+                                "from": {
+                                    "key_code": "right_command",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_command"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "japanese_kana"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "caps_lock -> esc / ctrl",
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "ctrl -> esc / ctrl",
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "tab -> hyper",
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_command",
+                                        "modifiers": [
+                                            "left_shift",
+                                            "left_option",
+                                            "left_control"
+                                        ]
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "tab"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "description": "right alt -> right alt / right click",
+                                "from": {
+                                    "key_code": "right_option"
+                                },
+                                "to": [
+                                    {
+                                        "pointing_button": "button2"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             },
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
