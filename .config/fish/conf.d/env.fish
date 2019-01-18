@@ -6,6 +6,8 @@ add_path_if_exists "$HOME/go/bin"
 add_path_if_exists "$HOME/.cargo/bin"
 add_path_if_exists "$HOME/bin"
 
+set -x LANG ja_JP.UTF-8
+
 set -x EDITOR vim
 if test -z "$SSH_CONNECTION"
   if command -v code >/dev/null
