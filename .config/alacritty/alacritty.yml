@@ -268,7 +268,7 @@ visual_bell:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.7
+background_opacity: 0.85
 
 # Mouse bindings
 #
@@ -527,12 +527,12 @@ key_bindings:
   - { key: F12,      mods: Command, chars: "\x1b[24;3~"                  }
   - { key: NumpadEnter,             chars: "\n"                          }
   - { key: Backslash,               chars: "\\"                          }
-  - { key: N,        mods: Command,       command: { program: "/usr/local/bin/tmux", args: ["new-window"] } }
-  - { key: J,        mods: Command,       command: { program: "/usr/local/bin/tmux", args: ["next-window"] } }
-  - { key: K,        mods: Command,       command: { program: "/usr/local/bin/tmux", args: ["previous-window"] } }
+  - { key: T,        mods: Command,       command: { program: "/usr/local/bin/tmux", args: ["new-window"] } }
+  - { key: N,        mods: Command,       command: { program: "/usr/local/bin/tmux", args: ["next-window"] } }
+  - { key: P,        mods: Command,       command: { program: "/usr/local/bin/tmux", args: ["previous-window"] } }
   - { key: S,        mods: Command,       command: { program: "/usr/local/bin/tmux", args: ["split-pane"] } }
   - { key: S,        mods: Command|Shift, command: { program: "/usr/local/bin/tmux", args: ["split-pane", "-h"] } }
-  - { key: Left,                          command: { program: "/usr/local/bin/tmux", args: ["select-pane", "-t", ":.-"] } }
-  - { key: Right,                         command: { program: "/usr/local/bin/tmux", args: ["select-pane", "-t", ":.+"] } }
-  - { key: Up,                            command: { program: "/usr/local/bin/tmux", args: ["previous-window"] } }
-  - { key: Down,                          command: { program: "/usr/local/bin/tmux", args: ["next-window"] } }
+  - { key: Up,                            command: { program: "/usr/local/bin/tmux", args: ["select-pane", "-t", ":.-"] } }
+  - { key: Down,                          command: { program: "/usr/local/bin/tmux", args: ["select-pane", "-t", ":.+"] } }
+  - { key: Left,                          command: { program: "/usr/local/bin/tmux", args: ["previous-window"] } }
+  - { key: Right,                         command: { program: "/usr/local/bin/tmux", args: ["next-window"] } }
