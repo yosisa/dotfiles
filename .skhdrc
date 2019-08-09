@@ -26,7 +26,7 @@ alt + ctrl - z : yabai -m window --display recent; yabai -m display --focus rece
 alt - m : yabai -m window --toggle zoom-fullscreen
 
 # toggle window parent zoom
-alt - x : yabai -m window --toggle zoom-parent
+alt - s : yabai -m window --toggle zoom-parent
 
 # toggle desktop offset
 alt + ctrl - x : yabai -m space --toggle padding; yabai -m space --toggle gap
@@ -42,3 +42,10 @@ alt - x : yabai -m space --mirror x-axis
 
 # float / unfloat window and center on screen
 alt - t : yabai -m window --toggle float; yabai -m window --grid 4:4:1:1:2:2
+
+# spaces
+alt - 0 : yabai -m space --focus recent
+alt - 1 : yabai -m space --focus 1
+alt - 2 : yabai -m space --focus 2
+alt - 3 : yabai -m space --focus 3
+alt - 4 : yabai -m space --focus 4
