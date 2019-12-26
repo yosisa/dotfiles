@@ -6,3 +6,7 @@ if command -v colordiff >/dev/null
 else
   alias diff "diff -u"
 end
+
+if command -v bat >/dev/null
+  alias b bat
+end

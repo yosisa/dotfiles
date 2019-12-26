@@ -4,6 +4,8 @@ end
 
 add_path_if_exists "$HOME/go/bin"
 add_path_if_exists "$HOME/.cargo/bin"
+add_path_if_exists "$HOME/.pub-cache/bin"
+add_path_if_exists "$HOME/Library/Android/sdk/platform-tools"
 add_path_if_exists "$HOME/bin"
 
 set -x LANG ja_JP.UTF-8
