@@ -7,7 +7,7 @@ function _git_root
 end
 
 function _git_branch
-  set -l git_branch (git symbolic-ref HEAD ^/dev/null)
+  set -l git_branch (git symbolic-ref HEAD 2>/dev/null)
   if test -n "$git_branch"
     echo (string split -r -m1 / $git_branch)[2]
   else
