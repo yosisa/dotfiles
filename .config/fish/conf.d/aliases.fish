@@ -9,4 +9,6 @@ end
 
 if command -v bat >/dev/null
   alias b bat
+  alias by "bat -l yaml"
+  alias bj "bat -l json"
 end
