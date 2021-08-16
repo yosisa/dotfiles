@@ -2,11 +2,19 @@ function add_path_if_exists
   test -d "$argv[1]"; and set PATH "$argv[1]" $PATH
 end
 
+function append_path_if_exists
+    test -d "$argv[1]"; and set PATH $PATH "$argv[1]"
+end
+
+add_path_if_exists "/usr/local/sbin"
 add_path_if_exists "$HOME/go/bin"
 add_path_if_exists "$HOME/.cargo/bin"
 add_path_if_exists "$HOME/.pub-cache/bin"
-add_path_if_exists "$HOME/Library/Android/sdk/platform-tools"
 add_path_if_exists "$HOME/bin"
+add_path_if_exists "$HOME/.local/bin"
+add_path_if_exists "$HOME/.vector/bin"
+
+append_path_if_exists "$HOME/Library/Android/sdk/platform-tools"
 
 set -x LANG ja_JP.UTF-8
 
