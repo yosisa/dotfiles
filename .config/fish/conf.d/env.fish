@@ -33,3 +33,5 @@ set -x GOPATH "$HOME/go"
 if command -v direnv >/dev/null
   eval (direnv hook fish)
 end
+
+set -x PIPENV_VENV_IN_PROJECT 1
