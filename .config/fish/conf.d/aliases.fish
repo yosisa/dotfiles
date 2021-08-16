@@ -12,3 +12,7 @@ if command -v bat >/dev/null
   alias by "bat -l yaml"
   alias bj "bat -l json"
 end
+
+if command -v pet >/dev/null
+  alias p pet-select
+end
