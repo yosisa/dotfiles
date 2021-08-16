@@ -78,19 +78,19 @@ tabspaces: 8
 font:
   # Normal (roman) font face
   normal:
-    family: NasuM
+    family: Cica
     # The `style` can be specified to pick a specific face.
     #style: Regular
 
   # Bold font face
   bold:
-    family: NasuM
+    family: Cica
     # The `style` can be specified to pick a specific face.
     style: Bold
 
   # Italic font face
   italic:
-    family: NasuM
+    family: Cica
     # The `style` can be specified to pick a specific face.
     #style: Italic
 
@@ -260,7 +260,7 @@ bell:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.85
+background_opacity: 1.0
 
 # Mouse bindings
 #
