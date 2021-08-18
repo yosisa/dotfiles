@@ -42,10 +42,16 @@ autoload -Uz compinit; compinit
 zinit cdreplay -q
 
 zinit light Aloxaf/fzf-tab
+zinit light zsh-users/zsh-syntax-highlighting
+
+function _my_setup_zsh_history_substring_search {
+  bindkey '^[[A' history-substring-search-up
+  bindkey '^[[B' history-substring-search-down
+}
 
 zinit wait lucid light-mode for \
-      zsh-users/zsh-syntax-highlighting \
       zdharma/history-search-multi-word \
+      atload"_my_setup_zsh_history_substring_search" zsh-users/zsh-history-substring-search \
       atload"_zsh_autosuggest_start" zsh-users/zsh-autosuggestions
 
 zinit wait lucid as"command" from"gh-r" \
