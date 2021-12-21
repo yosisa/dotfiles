@@ -27,7 +27,7 @@
 	required = true
 	process = git-lfs filter-process
 [ghq]
-	root = ~/.ghq
 	root = ~/go/src
+	root = ~/.ghq
 [include]
 	path = .gitconfig.local
