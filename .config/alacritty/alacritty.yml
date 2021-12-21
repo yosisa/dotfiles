@@ -420,7 +420,6 @@ key_bindings:
   - { key: C,        mods: Command, action: Copy                         }
   - { key: Paste,                   action: Paste                        }
   - { key: Copy,                    action: Copy                         }
-  - { key: H,        mods: Command, action: Hide                         }
   - { key: Q,        mods: Command, action: Quit                         }
   - { key: W,        mods: Command, action: Quit                         }
   - { key: Home,                    chars: "\x1bOH",   mode: AppCursor   }
@@ -430,8 +429,20 @@ key_bindings:
   - { key: Key0,     mods: Command, action: ResetFontSize                }
   - { key: Equals,   mods: Command, action: IncreaseFontSize             }
   - { key: Minus,    mods: Command, action: DecreaseFontSize             }
-  - { key: K,        mods: Command, action: ClearHistory                 }
-  - { key: K,        mods: Command, chars: "\x0c"                        }
+  - { key: H,        mods: Command, chars: "\x1bh"                       }
+  - { key: J,        mods: Command, chars: "\x1bj"                       }
+  - { key: K,        mods: Command, chars: "\x1bk"                       }
+  - { key: L,        mods: Command, chars: "\x1bl"                       }
+  - { key: Key1,     mods: Command, chars: "\x1b1"                       }
+  - { key: Key2,     mods: Command, chars: "\x1b2"                       }
+  - { key: Key3,     mods: Command, chars: "\x1b3"                       }
+  - { key: Key4,     mods: Command, chars: "\x1b4"                       }
+  - { key: Key5,     mods: Command, chars: "\x1b5"                       }
+  - { key: Key6,     mods: Command, chars: "\x1b6"                       }
+  - { key: Key7,     mods: Command, chars: "\x1b7"                       }
+  - { key: Key8,     mods: Command, chars: "\x1b8"                       }
+  - { key: Key9,     mods: Command, chars: "\x1b9"                       }
+  - { key: Key0,     mods: Command, chars: "\x1b0"                       }
   - { key: L,        mods: Control, action: ClearLogNotice               }
   - { key: L,        mods: Control, chars: "\x0c"                        }
   - { key: PageUp,   mods: Shift,   chars: "\x1b[5;2~"                   }
