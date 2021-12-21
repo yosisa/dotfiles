@@ -31,3 +31,7 @@
 	root = ~/.ghq
 [include]
 	path = .gitconfig.local
+[pull]
+	ff = only
+[init]
+	defaultBranch = master
