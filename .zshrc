@@ -29,6 +29,15 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
+# Set basic options
+setopt notify
+setopt autopushd
+export HISTSIZE=10000
+export SAVEHIST=10000
+setopt share_history
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+
 # Load powerlevel10k theme
 zinit ice depth"1" # git clone depth
 zinit light romkatv/powerlevel10k
