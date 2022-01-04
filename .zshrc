@@ -75,6 +75,10 @@ zinit wait lucid as"program" from"gh-r" \
       atpull"%atclone" pick"direnv" src"zhook.zsh" \
       light-mode for direnv/direnv
 
+zinit wait lucid light-mode \
+      atload"zpcdreplay" atclone"./zplug.zsh" for \
+      g-plane/zsh-yarn-autocompletions
+
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=250"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
