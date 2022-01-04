@@ -79,6 +79,10 @@ zinit wait lucid light-mode \
       atload"zpcdreplay" atclone"./zplug.zsh" for \
       g-plane/zsh-yarn-autocompletions
 
+if [[ $(uname) == "Darwin" ]]; then
+  zinit wait lucid light-mode for SukkaW/zsh-osx-autoproxy
+fi
+
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=250"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
