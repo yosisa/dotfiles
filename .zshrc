@@ -39,8 +39,10 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 
 # Load powerlevel10k theme
-zinit ice depth"1" # git clone depth
-zinit light romkatv/powerlevel10k
+zinit depth"1" light-mode for romkatv/powerlevel10k
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # zinit light zsh-users/zsh-syntax-highlighting
 zinit blockf light-mode for \
@@ -84,9 +86,6 @@ if [[ $(uname) == "Darwin" ]]; then
 fi
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=250"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 if [[ -d ~/.zsh.d ]]; then
     for f in ~/.zsh.d/*.zsh(.); do
