@@ -65,18 +65,6 @@ zinit wait lucid light-mode for \
       atload"_my_setup_zsh_history_substring_search" zsh-users/zsh-history-substring-search \
       atload"_zsh_autosuggest_start" zsh-users/zsh-autosuggestions
 
-zinit wait lucid as"command" from"gh-r" \
-      mv"zoxide*/zoxide -> zoxide" \
-      atclone"./zoxide init zsh > init.zsh" \
-      atpull"%atclone" pick"zoxide" src"init.zsh" nocompile"!" \
-      light-mode for ajeetdsouza/zoxide
-
-zinit wait lucid as"program" from"gh-r" \
-      mv"direnv* -> direnv" \
-      atclone"./direnv hook zsh > zhook.zsh" \
-      atpull"%atclone" pick"direnv" src"zhook.zsh" \
-      light-mode for direnv/direnv
-
 zinit wait lucid light-mode \
       atload"zpcdreplay" atclone"./zplug.zsh" for \
       g-plane/zsh-yarn-autocompletions
