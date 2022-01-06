@@ -44,7 +44,6 @@ zinit depth"1" light-mode for romkatv/powerlevel10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# zinit light zsh-users/zsh-syntax-highlighting
 zinit blockf light-mode for \
       zsh-users/zsh-completions
 
