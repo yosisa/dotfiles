@@ -15,8 +15,10 @@ elif command -v vim >/dev/null; then
     alias v="vim"
 fi
 
-command -v kubectl >/dev/null && alias -g k="kubectl"
+command -v kubectl >/dev/null && alias k="kubectl"
 command -v kubectx >/dev/null && alias kx="kubectx"
 
 command -v docker >/dev/null && alias d="docker"
 command -v nerdctl >/dev/null && alias n="nerdctl"
+
+command -v just >/dev/null && alias j="just"
