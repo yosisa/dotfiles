@@ -52,7 +52,7 @@ autoload -Uz compinit; compinit
 zinit cdreplay -q
 
 zinit blockf light-mode for Aloxaf/fzf-tab
-zinit light zsh-users/zsh-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
 
 function _my_setup_zsh_history_substring_search {
   bindkey '^[[A' history-substring-search-up
