@@ -40,6 +40,7 @@ export SAVEHIST=10000
 setopt share_history
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
+export WORDCHARS='*?_-.[]~;!#$%^(){}<>'
 
 # Load powerlevel10k theme
 zinit depth"1" light-mode for romkatv/powerlevel10k
