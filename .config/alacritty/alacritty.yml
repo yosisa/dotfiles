@@ -451,10 +451,10 @@ key_bindings:
   - { key: Back,     mods: Alt,     chars: "\x1b\x7f"                    }
   - { key: Insert,                  chars: "\x1b[2~"                     }
   - { key: Delete,                  chars: "\x1b[3~"                     }
-  - { key: Left,     mods: Shift,   chars: "\x1b[1;2D"                   }
+  - { key: Left,     mods: Shift,   chars: "\x1bh"                       }
   - { key: Left,     mods: Control, chars: "\x1b[1;5D"                   }
   - { key: Left,     mods: Alt,     chars: "\x1b[1;3D"                   }
-  - { key: Right,    mods: Shift,   chars: "\x1b[1;2C"                   }
+  - { key: Right,    mods: Shift,   chars: "\x1bl"                       }
   - { key: Right,    mods: Control, chars: "\x1b[1;5C"                   }
   - { key: Right,    mods: Alt,     chars: "\x1b[1;3C"                   }
   - { key: Up,       mods: Shift,   chars: "\x1b[1;2A"                   }
