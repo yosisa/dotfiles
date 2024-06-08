@@ -528,15 +528,6 @@ key_bindings:
   - { key: F12,      mods: Command, chars: "\x1b[24;3~"                  }
   - { key: NumpadEnter,             chars: "\n"                          }
   - { key: Backslash,               chars: "\\"                          }
-  - { key: T,        mods: Command,       command: { program: "/usr/local/bin/tmux", args: ["new-window"] } }
-  - { key: N,        mods: Command,       command: { program: "/usr/local/bin/tmux", args: ["next-window"] } }
-  - { key: P,        mods: Command,       command: { program: "/usr/local/bin/tmux", args: ["previous-window"] } }
-  - { key: S,        mods: Command,       command: { program: "/usr/local/bin/tmux", args: ["split-pane"] } }
-  - { key: S,        mods: Command|Shift, command: { program: "/usr/local/bin/tmux", args: ["split-pane", "-h"] } }
-#  - { key: Up,                            command: { program: "/usr/local/bin/tmux", args: ["select-pane", "-t", ":.-"] } }
-#  - { key: Down,                          command: { program: "/usr/local/bin/tmux", args: ["select-pane", "-t", ":.+"] } }
-#  - { key: Left,                          command: { program: "/usr/local/bin/tmux", args: ["previous-window"] } }
-#  - { key: Right,                         command: { program: "/usr/local/bin/tmux", args: ["next-window"] } }
 
 import:
   - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
