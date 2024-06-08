@@ -538,4 +538,4 @@ key_bindings:
 #  - { key: Right,                         command: { program: "/usr/local/bin/tmux", args: ["next-window"] } }
 
 import:
-  - ~/.config/alacritty/alacritty-theme/themes/challenger_deep.yaml
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
