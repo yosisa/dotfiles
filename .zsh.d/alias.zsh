@@ -11,8 +11,12 @@ fi
 
 if command -v nvim >/dev/null; then
     alias v="nvim"
+    alias vj="nvim -c 'set ft=json'"
+    alias vy="nvim -c 'set ft=yaml'"
 elif command -v vim >/dev/null; then
     alias v="vim"
+    alias vj="vim -c 'set ft=json'"
+    alias vy="vim -c 'set ft=yaml'"
 fi
 
 command -v kubectl >/dev/null && alias k="kubectl"
