@@ -42,6 +42,9 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 export WORDCHARS='*?_-.[]~;!#$%^(){}<>'
 
+# Enable emacs-like key bindings
+bindkey -e
+
 # Load powerlevel10k theme
 zinit depth"1" light-mode for romkatv/powerlevel10k
 
