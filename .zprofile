@@ -10,6 +10,7 @@ fi
 export XDG_CONFIG_HOME=$HOME/.config
 export GOPATH=$HOME/go
 
+(( ${+commands[nvim]} )) && export EDITOR=nvim
 (( ${+commands[volta]} )) && export VOLTA_HOME=$HOME/.volta
 
 path=(
