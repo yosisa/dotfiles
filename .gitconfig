@@ -38,7 +38,7 @@
 [pull]
 	ff = only
 [init]
-	defaultBranch = master
+	defaultBranch = main
 [delta]
 	line-numbers = true
 	features = decorations
