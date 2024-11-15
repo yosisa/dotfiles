@@ -1,6 +1,5 @@
 import = ["~/.config/alacritty/catppuccin/catppuccin-mocha.toml"]
 live_config_reload = true
-tabspaces = 8
 
 [bell]
 animation = "EaseOutExpo"
@@ -621,14 +620,7 @@ mouse = "Right"
 action = "PasteSelection"
 mouse = "Middle"
 
-[mouse.double_click]
-threshold = 300
-
-[mouse.triple_click]
-threshold = 300
-
 [scrolling]
-auto_scroll = false
 history = 10000
 multiplier = 3
 
