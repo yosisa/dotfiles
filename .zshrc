@@ -1,12 +1,4 @@
 (( ${+commands[direnv]} )) && emulate zsh -c "$(direnv export zsh)"
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 (( ${+commands[direnv]} )) && emulate zsh -c "$(direnv hook zsh)"
 
 ### Added by Zinit's installer
@@ -45,12 +37,6 @@ export WORDCHARS='*?_-.[]~;!#$%^(){}<>'
 # Enable emacs-like key bindings
 bindkey -e
 
-# Load powerlevel10k theme
-zinit depth"1" light-mode for romkatv/powerlevel10k
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 zinit blockf light-mode for \
       zsh-users/zsh-completions
 
@@ -86,3 +72,5 @@ if [[ -d ~/.zsh.d ]]; then
         source $f
     done
 fi
+
+(( ${+commands[starship]} )) && eval "$(starship init zsh)"
