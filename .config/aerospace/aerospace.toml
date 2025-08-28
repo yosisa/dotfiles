@@ -16,7 +16,7 @@ start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
-enable-normalization-opposite-orientation-for-nested-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = false
 
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
@@ -97,22 +97,24 @@ automatically-unhide-macos-hidden-apps = true
     # '''
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-    alt-slash = 'layout tiles horizontal vertical'
+    alt-period = 'layout tiles horizontal vertical'
     alt-comma = 'layout accordion horizontal vertical'
     alt-t = 'layout floating tiling'
     alt-m = 'fullscreen'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     alt-h = 'focus left'
-    alt-j = 'focus down'
-    alt-k = 'focus up'
+    alt-j = 'focus dfs-next'
+    alt-k = 'focus dfs-prev'
+    # alt-j = 'focus down'
+    # alt-k = 'focus up'
     alt-l = 'focus right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
-    alt-ctrl-h = 'move left'
-    alt-ctrl-j = 'move down'
-    alt-ctrl-k = 'move up'
-    alt-ctrl-l = 'move right'
+    alt-ctrl-h = 'move --boundaries all-monitors-outer-frame left'
+    alt-ctrl-j = 'move --boundaries all-monitors-outer-frame down'
+    alt-ctrl-k = 'move --boundaries all-monitors-outer-frame up'
+    alt-ctrl-l = 'move --boundaries all-monitors-outer-frame right'
 
     alt-right = 'join-with right'
     alt-left = 'join-with left'
